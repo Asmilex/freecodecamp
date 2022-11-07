@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>freeCodeCamp Survey Form</title>
+    </head>
+
+    <body>
+        <h1 id="title">Formulario final de FreeCodeCamp</h1>
+        <p id="description">
+            Formulario apetepórico necesario para sacarse la certificación de
+            FreeCodeCamp.
+        </p>
+    </body>
+
+    <form id="survey-form">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name" id="name-label"
+                >Nombre
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Perico de los Palotes"
+                    required
+            /></label>
+            <label for="email" id="email-label"
+                >Correo electrónico
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="apetecan@apetepore.io"
+                    required
+            /></label>
+            <label for="number" id="number-label"
+                >Edad (opcional)
+                <input
+                    id="number"
+                    type="number"
+                    min="5"
+                    max="120"
+                    placeholder="70"
+            /></label>
+            <label> ¿Qué opción describe tu posición actual?</label>
+            <select id="dropdown">
+                <option hidden selected>Selecciona una opción</option>
+                <option>Desarrollador junior</option>
+                <option>Desarrollador senior</option>
+                <option>Otro</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>¿Recomendarías este curso a otra persona?</legend>
+            <label>
+                <input
+                    id="definitely"
+                    type="radio"
+                    name="recommendation"
+                    value="yes"
+                />
+                Por supuesto</label
+            >
+            <label for="recommendation"
+                ><input
+                    id="definitely"
+                    type="radio"
+                    name="recommendation"
+                    value="maybe"
+                />
+                Meh, puede</label
+            >
+            <label for="recommendation">
+                <input
+                    id="definitely"
+                    type="radio"
+                    name="recommendation"
+                    value="no"
+                />
+                Nope</label
+            >
+        </fieldset>
+
+        <fieldset>
+            <legend>¿Qué tecnologías te gustaría aprender?</legend>
+            <label for="aspects"
+                >¿En qué áreas te gustaría mejorar?
+                <input type="checkbox" value="front-end" /> Front-end
+                <input type="checkbox" value="back-end" /> Back-end
+                <input type="checkbox" value="data-visualization" />
+                Visualización de datos
+                <input type="checkbox" value="challenges" /> Retos
+            </label>
+            <label>Expláyate si quieres anda</label>
+            <textarea id="comments" name="comments" placeholder="Escribe aquí">
+            </textarea>
+            <input type="submit" value="Submit" id="submit" />
+        </fieldset>
+    </form>
+</html>
